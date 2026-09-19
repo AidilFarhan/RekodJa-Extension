@@ -1,0 +1,15 @@
+:root { --ink:#11213b; --muted:#52637a; --line:#dce4ef; --paper:#f7f9fc; --accent:#1769e0; --mint:#d9f7e9; }
+* { box-sizing:border-box; }
+body { margin:0; color:var(--ink); background:var(--paper); font:16px/1.6 Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+main, footer { max-width:1080px; margin:auto; padding-left:28px; padding-right:28px; }
+nav { min-height:92px; display:flex; align-items:center; justify-content:space-between; }
+a { color:inherit; text-underline-offset:3px; }
+.brand { font-weight:800; text-decoration:none; letter-spacing:-.04em; font-size:1.15rem; }.brand span { color:var(--accent); }
+.hero { padding:88px 0 82px; max-width:800px; }.eyebrow,.number { color:var(--accent); font-weight:800; letter-spacing:.11em; text-transform:uppercase; font-size:.73rem; }
+h1,h2 { line-height:1.08; letter-spacing:-.055em; margin:0; } h1 { font-size:clamp(3rem,8vw,6.25rem); } h2 { font-size:clamp(1.9rem,4vw,3.2rem); }
+.lede { font-size:1.18rem; color:var(--muted); max-width:610px; margin:30px 0; }.button { display:inline-block; color:white; background:var(--accent); text-decoration:none; padding:13px 19px; border-radius:8px; font-weight:700; }
+.grid { display:grid; grid-template-columns:repeat(3,1fr); background:white; border:1px solid var(--line); border-radius:16px; overflow:hidden; }.grid article { padding:32px; }.grid article+article { border-left:1px solid var(--line); }.grid h2 { font-size:1.35rem; letter-spacing:-.03em; }.grid p:not(.number),.data>p { color:var(--muted); }
+.data { display:grid; grid-template-columns:1fr 1fr; gap:72px; margin:88px 0; align-items:center; }.data h2 { font-size:2.4rem; }.data>p { margin:0; }
+footer { min-height:100px; border-top:1px solid var(--line); display:flex; justify-content:space-between; align-items:center; color:var(--muted); font-size:.9rem; } footer span:last-child { display:flex; gap:20px; }
+.legal { max-width:780px; padding-top:52px; padding-bottom:72px; }.legal h1 { font-size:clamp(2.7rem,6vw,4.6rem); }.legal h2 { font-size:1.38rem; letter-spacing:-.03em; margin-top:42px; }.legal p,.legal li { color:var(--muted); }.legal .updated { margin-top:10px; color:var(--muted); }
+@media (max-width:700px) { main,footer { padding-left:20px; padding-right:20px; }.hero { padding:55px 0; }.grid,.data { grid-template-columns:1fr; }.grid article+article { border-left:0; border-top:1px solid var(--line); }.data { gap:22px; margin:55px 0; } footer { padding-top:24px; padding-bottom:24px; align-items:flex-start; flex-direction:column; gap:12px; } }

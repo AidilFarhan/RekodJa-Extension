@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    width: 320px;
+    padding: 14px;
+    color: #1f2937;
+  }
+  h3 { margin: 0 0 10px 0; font-size: 15px; }
+  label { display: block; margin-top: 10px; font-size: 12px; font-weight: bold; color: #374151; }
+  input[type="text"] {
+    width: 100%;
+    padding: 7px;
+    margin-top: 4px;
+    box-sizing: border-box;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    font-size: 13px;
+  }
+  button {
+    margin-top: 14px;
+    width: 100%;
+    padding: 9px;
+    background: #2563eb;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: bold;
+  }
+  button:disabled { background: #9ca3af; cursor: not-allowed; }
+  #openSheetBtn { background: #10b981; }
+  #status { margin-top: 10px; font-size: 12px; min-height: 14px; }
+  #status.error { color: #dc2626; }
+  #status.success { color: #16a34a; }
+  .settings-toggle {
+    margin-top: 12px;
+    font-size: 11px;
+    color: #6b7280;
+    text-align: right;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  #settingsPanel {
+    display: none;
+    margin-top: 10px;
+    border-top: 1px solid #e5e7eb;
+    padding-top: 10px;
+  }
+  #settingsPanel button { background: #10b981; }
+  .hint { font-size: 11px; color: #9ca3af; margin-top: 3px; }
+</style>
+</head>
+<body>
+  <h3>Add to Job Tracker</h3>
+
+  <label for="jobLink">Job Link</label>
+  <input type="text" id="jobLink" placeholder="https://...">
+
+  <label for="dateApplied">Date Applied</label>
+  <input type="text" id="dateApplied" placeholder='e.g. "2 weeks ago", "today"'>
+  <div class="hint">Leave blank to fill in later directly in the sheet</div>
+
+  <button id="saveBtn">Save to Tracker</button>
+  <button id="openSheetBtn">Access Spreadsheet</button>
+  <div id="status"></div>
+
+  <div class="settings-toggle" id="settingsToggle">Settings</div>
+  <div id="settingsPanel">
+    <label for="sheetId">Google Sheet ID</label>
+    <input type="text" id="sheetId" placeholder="From your sheet's URL, between /d/ and /edit">
+    <div class="hint">e.g. docs.google.com/spreadsheets/d/<b>THIS_PART</b>/edit</div>
+    <button id="saveSettingsBtn">Save Settings</button>
+  </div>
+
+  <hr>
+  <h3>Gmail tracking</h3>
+  <p class="hint">Scan application emails from the last 3 months. Review company matches and status suggestions before updating or importing. Scanning continues when this popup closes. Results stay until you rescan. Keep the popup open while saving to Sheets. Gmail access is read-only.</p>
+  <button id="gmailScan">Connect Gmail &amp; Scan</button>
+  <div id="gmailStatus" role="status" style="margin-top:10px;font-size:12px"></div>
+  <div id="gmailResults"></div>
+  <script src="popup.js"></script>
+  <script src="gmail-core.js"></script>
+  <script src="gmail.js"></script>
+</body>
+</html>

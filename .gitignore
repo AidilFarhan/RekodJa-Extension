@@ -1,0 +1,10 @@
+# Build / packaging artifacts
+*.zip
+
+# Stale / duplicate snapshots — kept out of history.
+# Decision to archive vs delete these is pending user review.
+extracted/
+backup-before-background-*/
+
+# R session artifacts
+.Rhistory
