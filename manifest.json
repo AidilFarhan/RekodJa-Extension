@@ -21,21 +21,16 @@
     "identity",
     "activeTab",
     "scripting",
-    "storage",
-    "alarms"
+    "storage"
   ],
   "host_permissions": [
-    "https://sheets.googleapis.com/*",
-    "https://gmail.googleapis.com/*"
+    "https://sheets.googleapis.com/*"
   ],
   "oauth2": {
     "client_id": "733030901679-lsqcm88g09vqev7afk2mrb8q5iermc0a.apps.googleusercontent.com",
     "scopes": [
       "https://www.googleapis.com/auth/spreadsheets"
     ]
-  },
-  "background": {
-    "service_worker": "gmail-background.js"
   },
   "minimum_chrome_version": "120"
 }
