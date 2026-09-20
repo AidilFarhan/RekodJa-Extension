@@ -4,43 +4,46 @@
 <meta charset="utf-8">
 <style>
   body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     width: 320px;
     padding: 14px;
-    color: #1f2937;
+    color: #252525;
+    background: #fafaf9;
   }
-  h3 { margin: 0 0 10px 0; font-size: 15px; }
-  label { display: block; margin-top: 10px; font-size: 12px; font-weight: bold; color: #374151; }
+  h3 { margin: 0 0 10px 0; font-size: 15px; color: #14213d; letter-spacing: -.3px; }
+  label { display: block; margin-top: 10px; font-size: 12px; font-weight: 600; color: #14213d; }
   input[type="text"] {
     width: 100%;
-    padding: 7px;
+    padding: 8px 10px;
     margin-top: 4px;
     box-sizing: border-box;
-    border: 1px solid #d1d5db;
-    border-radius: 4px;
+    border: 1px solid #d5dbe4;
+    border-radius: 5px;
     font-size: 13px;
+    background: #fff;
+    color: #252525;
   }
   button {
     margin-top: 14px;
     width: 100%;
     padding: 9px;
-    background: #2563eb;
+    background: #14213d;
     color: #fff;
-    border: none;
-    border-radius: 4px;
+    border: 1px solid #14213d;
+    border-radius: 5px;
     cursor: pointer;
     font-size: 13px;
-    font-weight: bold;
+    font-weight: 600;
   }
-  button:disabled { background: #9ca3af; cursor: not-allowed; }
-  #openSheetBtn { background: #10b981; }
-  #status { margin-top: 10px; font-size: 12px; min-height: 14px; }
-  #status.error { color: #dc2626; }
-  #status.success { color: #16a34a; }
+  button:disabled { background: #9ca3af; border-color: #9ca3af; cursor: not-allowed; }
+  #openSheetBtn { background: #fff; color: #14213d; border: 1px solid #d7dce4; }
+  #status { margin-top: 10px; font-size: 12px; min-height: 14px; color: #555; }
+  #status.error { color: #a53535; }
+  #status.success { color: #176b35; }
   .settings-toggle {
     margin-top: 12px;
     font-size: 11px;
-    color: #6b7280;
+    color: #626976;
     text-align: right;
     cursor: pointer;
     text-decoration: underline;
@@ -51,12 +54,13 @@
     border-top: 1px solid #e5e7eb;
     padding-top: 10px;
   }
-  #settingsPanel button { background: #10b981; }
-  .hint { font-size: 11px; color: #9ca3af; margin-top: 3px; }
+  #settingsPanel button { background: #14213d; }
+  .hint { font-size: 11px; color: #626976; margin-top: 3px; }
+  hr { border: 0; border-top: 1px solid #e5e7eb; }
 </style>
 </head>
 <body>
-  <h3>Add to Job Tracker</h3>
+  <h3>Add to RekodJa</h3>
 
   <label for="jobLink">Job Link</label>
   <input type="text" id="jobLink" placeholder="https://...">
@@ -65,7 +69,7 @@
   <input type="text" id="dateApplied" placeholder='e.g. "2 weeks ago", "today"'>
   <div class="hint">Leave blank to fill in later directly in the sheet</div>
 
-  <button id="saveBtn">Save to Tracker</button>
+  <button id="saveBtn">Save</button>
   <button id="openSheetBtn">Access Spreadsheet</button>
   <div id="status"></div>
 
