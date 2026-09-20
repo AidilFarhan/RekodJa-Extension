@@ -1,11 +1,11 @@
 {
   "manifest_version": 3,
-  "name": "Job Tracker Quick Add",
+  "name": "RekodJa: Job Tracker",
   "version": "1.4",
-  "description": "Add the job posting on your current tab straight into your Google Sheet job tracker.",
+  "description": "RekodJa: Job Tracker records your job applications straight into your own Google Sheet.",
   "action": {
     "default_popup": "popup.html",
-    "default_title": "Add to Job Tracker",
+    "default_title": "RekodJa",
     "default_icon": {
       "16": "icon16.png",
       "48": "icon48.png",

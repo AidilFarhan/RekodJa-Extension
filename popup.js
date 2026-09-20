@@ -8,6 +8,10 @@ const settingsPanel = document.getElementById("settingsPanel");
 const sheetIdInput = document.getElementById("sheetId");
 const saveSettingsBtn = document.getElementById("saveSettingsBtn");
 
+// Centralised display names — future renames edit these two lines only.
+const APP_NAME = "RekodJa";
+const APP_FULL_NAME = "RekodJa: Job Tracker";
+
 let activeTabId = null;
 let selectedSheetTab = "";
 let sheetTabsLoaded = false;
